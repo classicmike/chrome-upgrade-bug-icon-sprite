@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page to demonstrate bug.</title>
+</head>
+<style>
+    .icon-demo {
+        background: #f5f5f5;
+        padding: 2rem;
+        margin: 0 1rem;
+        border-radius: 1rem;
+    }
+
+    .icon-demo__icon {
+        width: 5rem;
+        height: 5rem;
+    }
+</style>
+<body>
+
+<main>
+    <h1>Page to Demonstrate SVG Icon Sprite in Latest Version of Chrome</h1>
+    <p>In the latest version of Google Chrome (Version 126.0.6478.56), users are experiencing a bug where SVG icon sprites are not rendering correctly. This issue seems to stem from a recent update in the browser's rendering engine, which affects the way external SVG sprites are referenced and displayed. Specifically, the problem arises when using the <use> element within inline SVG tags to reference symbols from an external sprite file. Instead of displaying the expected icons, the browser shows nothing, indicating that it cannot properly locate or render the referenced SVG symbols.</p>
+    <h2>Demonstration</h2>
+    <p>If you are not seeing this icon, and the version you have installed is <strong>126.0.6478.56</strong>, then this confirms the bug exists.</p>
+    <div class="icon-demo">
+        <svg class="icon-demo__icon" aria-hidden="true">
+            <use xlink:href="./images/sprite.css.svg#calendar"></use>
+        </svg>
+    </div>
+</main>
+
+</body>
+</html>
